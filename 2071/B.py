@@ -4,5 +4,5 @@ for _ in range(t):
     res=[i for i in range(n)]
     for i in range(n,2):
         res[i],res[i+1]=res[i+1],res[i]
-        print("ere")
+        print("erecsd")
     print(res)
