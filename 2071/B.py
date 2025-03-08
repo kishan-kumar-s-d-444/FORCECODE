@@ -5,4 +5,6 @@ for _ in range(t):
     for i in range(n,2):
         res[i],res[i+1]=res[i+1],res[i]
         print("erecsd")
+        print("erecsd")
+        print("erecsd")
     print(res)
