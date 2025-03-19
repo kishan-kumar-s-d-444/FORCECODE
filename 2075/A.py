@@ -12,6 +12,5 @@ for _ in range(t):
     
     if(k%2==1):
         k=k-1
-    ans=ans+math.ceil(n/k)
-    print(ans)
+    print(ans+math.ceil(n/k))
     
