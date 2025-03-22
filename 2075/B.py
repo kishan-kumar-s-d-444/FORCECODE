@@ -12,16 +12,10 @@ for _ in range(t):
     while(heap and nk):
         ele,ind=heapq.heappop(heap)
         done[ind]=1
+        #print
         res=res+(-ele)
         nk-=1
     if(k==1):
-        if(done[0]==1):
-            res+=a[n-1]
-        elif(done[n-1]==1):
-            res+=a[0]
-        else:
-            res+=max(a[0],a[n-1])
-    else:
         ele,ind=heapq.heappop(heap)
         done[ind]=1
         res=res+(-ele)
