@@ -12,7 +12,6 @@ for _ in range(t):
     while(heap and nk):
         ele,ind=heapq.heappop(heap)
         done[ind]=1
-        #print
         res=res+(-ele)
         nk-=1
     if(k==1):
