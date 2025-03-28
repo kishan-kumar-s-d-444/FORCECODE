@@ -5,7 +5,7 @@ for _ in range(t):
     for _ in range(n):
         row=input().strip()
         grid.append(row)
-
+    #3333333
     flag=[[True]*(m) for _ in range(n)]
     for i in range(n):
         ff=False
