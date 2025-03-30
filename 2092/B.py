@@ -27,7 +27,7 @@ for _ in range(t):
             else:
                 if(a[i]=='0'):
                     z2+=1
-        if(z2>=math.ceil(n/2)):
+        if(z2>=math.floor(n/2)):
             flag=False
         if(flag):
             print("No")
