@@ -5,6 +5,7 @@ for _ in range(t):
     b=m
     low=1
     high=b
+    #kdkf
     while(low<=high):
         mid=(low+high)//2
         z1=b//(mid+1)
