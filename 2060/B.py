@@ -9,22 +9,26 @@ for _ in range(t):
         for it in arr:
             dic[it]=i+1
         cards.append(arr)
-    res=[]
-    flag=True
-    ind=0
-    for i in range(n*m):
-        if(len(res)<n):
-            res.append(dic[i])
-            if(i+1<n*m-1 and dic[i+1]==dic[i]):
-                flag=False
-                break
-        else:
-            if(dic[i]!=res[ind]):
-                flag=False
-                break
-            ind=(ind+1)%n
-    if(flag):
-        for a in res:
-            print(a,end=" ")
+    if(n==1):
+        print(1)
     else:
-        print(-1)
+        res=[]
+        flag=True
+        ind=0
+        for i in range(n*m):
+            if(len(res)<n):
+                res.append(dic[i])
+                if(i+1<n*m-1 and dic[i+1]==dic[i]):
+                    flag=False
+                    break
+            else:
+                if(dic[i]!=res[ind]):
+                    flag=False
+                    break
+                ind=(ind+1)%n
+        if(flag):
+            for a in res:
+                print(a,end=" ")
+        else:
+            print(-1)
+    print("\n")
