@@ -1,0 +1,11 @@
+    inter=n-m
+    flag=True
+    while(inter):
+        if(flag):
+            r-=1
+            flag=False
+        else:
+            l-=1
+            falg=True
+        inter-=1
+    print(l,r)
