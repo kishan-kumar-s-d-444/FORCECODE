@@ -18,6 +18,8 @@ for _ in range(t):
             flag=False
             break
         i+=1
+    if(j!=m):
+        flag=False
     if(flag):
         print("YES")
     else:
