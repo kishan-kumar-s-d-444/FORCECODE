@@ -5,5 +5,5 @@ for _ in range(t):
     dic={}
     for i in range(n):
         if(a[i] not in dic):
-            dic[[a[i]]]=1
+            dic[a[i]]=1
     print(len(dic))
