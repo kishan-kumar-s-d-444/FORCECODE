@@ -6,4 +6,4 @@ for _ in range(t):
     low,high=min(a),max(a)
     diff=high-low
     res=math.gcd(low+diff,high+diff)
-    print(res*2)
+    print(res*2*5)
