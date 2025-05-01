@@ -30,6 +30,20 @@ for _ in range(t):
                     cnt+=1
                     flag=not flag
                 cnt+=1
-        print(cnt)
+
+        cnt_=0
+        flag=False
+        for i in range(n):
+            if(s[i]=='0'):
+                if(flag):
+                    cnt_+=1
+                    flag=not flag
+                cnt_+=1
+            else:
+                if(not flag):
+                    cnt_+=1
+                    flag=not flag
+                cnt_+=1
+        print(min(cnt,cnt_))
 
     
