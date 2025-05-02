@@ -45,5 +45,6 @@ for _ in range(t):
                     flag=not flag
                 cnt_+=1
         print(min(cnt,cnt_))
+        #print("Hello")
 
     
