@@ -2,7 +2,8 @@ t=int(input())
 for _ in range(t):
     n=int(input())
     s=input()
-    st,en=-1,-1
+    st=-1
+    en=-1
     for i in range(n):
         if(s[i]=='0'):
             if(st==-1):
