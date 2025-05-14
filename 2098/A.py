@@ -5,7 +5,6 @@ for _ in range(t):
     count=Counter(s)
     res=""
     for i in range(9,-1,-1):
-        print(count)
         start=i
         while(start<9 and str(start) not in count):
             start+=1
