@@ -1,9 +1,11 @@
 import math
-t=int(input())
+
+t = int(input())
 for _ in range(t):
-    n=int(input())
-    a=list(map(int,input().split()))
-    low,high=min(a),max(a)
-    diff=high-low
-    res=math.gcd(low+diff,high+diff)
-    print(res*2*5)
+    n = int(input())
+    a = list(map(int, input().split()))
+    a.sort()
+    diff_gcd = 0
+    for i in range(1, n):
+        diff_gcd = math.gcd(diff_gcd, a[i] - a[i - 1])
+    print(diff_gcd)
