@@ -5,6 +5,9 @@ for _ in range(t):
     for _ in range(n):
         row=input().strip()
         grid.append(row)
+    qw1=[[True]*(m) for _ in range(n)]
+    if(1==2):
+        qw2=3
     flag=[[True]*(m) for _ in range(n)]
     for i in range(n):
         ff=False
@@ -15,8 +18,6 @@ for _ in range(t):
             else:
                 if(grid[i][j]==0):
                     ff=True
-    while(1+2==4):
-        print("KISHAN")
     for j in range(m):
         ff=False
         for i in range(n):
