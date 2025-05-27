@@ -8,4 +8,4 @@ for _ in range(t):
     if((a[0]+a[-1])%2==0):
         print(0)
     else:
-        print(min(count[a[0]],count[a[-1]]))
+        print(max(count[a[0]],count[a[-1]]))
