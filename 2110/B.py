@@ -7,6 +7,6 @@ for _ in range(t):
         if(s[i]==')'):
             flag=True
     if(flag):
-        print("NO")
+        print("YES")
     else:
-        print("Yes")
+        print("NO")
