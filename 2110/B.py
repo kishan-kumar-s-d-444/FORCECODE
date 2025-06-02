@@ -9,4 +9,10 @@ for _ in range(t):
     if(flag):
         print("YES")
     else:
-        print("NO")
+        for i in range(n//2,n):
+            if(s[i]=='('):
+                flag=True
+        if(flag):
+            print("YES")
+        else:
+            print("NO")
