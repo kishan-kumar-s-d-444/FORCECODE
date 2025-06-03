@@ -6,13 +6,10 @@ for _ in range(t):
     for i in range(n//2):
         if(s[i]==')'):
             flag=True
+    for i in range(n//2,n):
+        if(s[i]=='('):
+            flag=True
     if(flag):
         print("YES")
     else:
-        for i in range(n//2,n):
-            if(s[i]=='('):
-                flag=True
-        if(flag):
-            print("YES")
-        else:
-            print("NO")
+        print("NO")
