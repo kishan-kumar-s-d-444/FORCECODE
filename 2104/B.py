@@ -20,7 +20,7 @@ for _ in range(t):
         else:
             res[i]=suf[i+1]+pre[i]
     
-    for i in range(n):
+    for i in range(n-1,-1,-1):
         print(res[i],end=" ")
-    print("/n")
+    print("\n")
         
