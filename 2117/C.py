@@ -9,13 +9,13 @@ for _ in range(t):
     cur={a[0]:1}
     cur_cnt=1
     for i in range(1,n):
-        # print(i,"\n",prev,prev_cnt,"\n",cur,cur_cnt)
         if(flag):
             if(a[i] in cur and cur[a[i]]!=-1):
                 cur[a[i]]=-1
                 cur_cnt-=1
             if(a[i] not in prev or prev[a[i]]==-1):
                 prev_cnt+=1
+                prev[a[i]]=1
             prev[a[i]]=1
             if(cur_cnt==0):
                 flag=False
@@ -26,6 +26,7 @@ for _ in range(t):
                 prev_cnt-=1
             if(a[i] not in cur or cur[a[i]]==-1):
                 cur_cnt+=1
+                cur[a[i]]=1
             cur[a[i]]=1
             if(prev_cnt==0):
                 flag=True
@@ -33,4 +34,3 @@ for _ in range(t):
     print(ans)
 
         
-
