@@ -5,32 +5,71 @@ for _ in range(t):
     if(x<y):
         if(k>=a):
             c1=k-a
-            ans+=(c1//x)
-            k=k-c1
+            q1=c1//x
+            ans+=q1
+            k=k-(q1*x)
         if(k>=a):
             ans+=1
             k=k-x
         if(k>=b):
-            c1=k-b
-            ans+=(c1//y)
-            k=k-c1
+            c2=k-b
+            q2=c2//y
+            ans+=q2
+            k=k-(q2*y)
         if(k>=b):
             ans+=1
             k=k-y
-    else:
+    elif(x>y):
         if(k>=b):
-            c1=k-b
-            ans+=(c1//y)
-            k=k-c1
+            c2=k-b
+            q2=c2//y
+            ans+=q2
+            k=k-(q2*y)
         if(k>=b):
             ans+=1
             k=k-y
         if(k>=a):
             c1=k-a
-            ans+=(c1//x)
-            k=k-c1
+            q1=c1//x
+            ans+=q1
+            k=k-(q1*x)
         if(k>=a):
             ans+=1
             k=k-x
+    else:
+        if(a>b):
+            if(k>=a):
+                c1=k-a
+                q1=c1//x
+                ans+=q1
+                k=k-(q1*x)
+            if(k>=a):
+                ans+=1
+                k=k-x
+            if(k>=b):
+                c2=k-b
+                q2=c2//y
+                ans+=q2
+                k=k-(q2*y)
+            if(k>=b):
+                ans+=1
+                k=k-y
+        else:
+            if(k>=b):
+                c2=k-b
+                q2=c2//y
+                ans+=q2
+                k=k-(q2*y)
+            if(k>=b):
+                ans+=1
+                k=k-y
+            if(k>=a):
+                c1=k-a
+                q1=c1//x
+                ans+=q1
+                k=k-(q1*x)
+            if(k>=a):
+                ans+=1
+                k=k-x
     print(ans)
         
