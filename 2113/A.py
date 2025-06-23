@@ -1,0 +1,36 @@
+t=int(input())
+for _ in range(t):
+    k,a,b,x,y=map(int,input().split())
+    ans=0
+    if(x<y):
+        if(k>=a):
+            c1=k-a
+            ans+=(c1//x)
+            k=k-c1
+        if(k>=a):
+            ans+=1
+            k=k-x
+        if(k>=b):
+            c1=k-b
+            ans+=(c1//y)
+            k=k-c1
+        if(k>=b):
+            ans+=1
+            k=k-y
+    else:
+        if(k>=b):
+            c1=k-b
+            ans+=(c1//y)
+            k=k-c1
+        if(k>=b):
+            ans+=1
+            k=k-y
+        if(k>=a):
+            c1=k-a
+            ans+=(c1//x)
+            k=k-c1
+        if(k>=a):
+            ans+=1
+            k=k-x
+    print(ans)
+        
