@@ -8,7 +8,8 @@ for _ in range(t):
     flag=True
     cur=set()
     cur.add(a[0])
-    cur_cnt=1
+    cur_cnt=0
+    cur_cnt+=1
     for i in range(1,n):
         if(flag):
             if(a[i] in cur):
