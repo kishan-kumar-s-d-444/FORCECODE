@@ -1,12 +1,19 @@
 t=int(input())
 for _ in range(t):
     a,x,y=map(int,input().split())
-    d1=abs(a-x)
-    d2=abs(x-y)
-    d3=abs(a-y)
-    if(d1>=d2 and d3>=d2):
+    atox=abs(a-x)
+    atoy=abs(a-y)
+    flag=False
+    for point in range(min(x,y),max(x,y)+1):
+        btox=abs(point-x)
+        btoy=abs(point-y)
+        if(btox<atox and btoy<atoy):
+            flag=True
+            break
+    if(flag):
         print("YES")
     else:
         print("NO")
+
         
-        
+       
