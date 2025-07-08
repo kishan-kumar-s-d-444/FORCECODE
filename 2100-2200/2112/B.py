@@ -10,19 +10,20 @@ for _ in range(t):
     for i in range(1,n):
         if(abs(a[i-1]-a[i])<=1):
             flag=min(flag,0)
-        mini=min(a[i-1],a[i])
-        maxi=max(a[i-1],a[i])
-        r1=prev>=mini and prev<=maxi
-        r2=prev+1>=mini and prev+1<=maxi
-        r3=prev-1>=mini and prev-1<=maxi
-        if(r1 or r2 or r3):
-            flag=min(flag,1)
+        # mini=min(a[i-1],a[i])
+        # maxi=max(a[i-1],a[i])
+        # r1=prev>=mini and prev<=maxi
+        # r2=prev+1>=mini and prev+1<=maxi
+        # r3=prev-1>=mini and prev-1<=maxi
+        # if(r1 or r2 or r3):
+        #     flag=min(flag,1)
     if(flag!=float('inf')):
         print(flag)
         continue
     if(flag==float('inf') and n==2):
         print(-1)
         continue
+    print(1)
     
     
 
