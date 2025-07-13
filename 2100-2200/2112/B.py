@@ -41,4 +41,4 @@ def fun(a):
     #     cur+=1
     #     prevmin=min(prevmin,a[i])
     #     prevmax=max(prevmax,a[i])
-    return a
+    
