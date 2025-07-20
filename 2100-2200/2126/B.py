@@ -11,8 +11,11 @@ for _ in range(t):
             continue
         if(a[i]==0):
             day+=1
+        else:
+            day=0
         if(day==k):
             ans+=1
+            day=0
             rest=True
-    print("KISHAN",ans)
+    print(ans)
         
