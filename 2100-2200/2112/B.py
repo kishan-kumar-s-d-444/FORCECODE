@@ -27,18 +27,18 @@ for _ in range(t):
 
 
 
-def fun(a):
-    # q1=prevmin>=mini and prevmin<=maxi
-    # q2=prevmin+1>=mini and prevmin+1<=maxi
-    # q3=prevmin-1>=mini and prevmin-1<=maxi
+# def fun(a):
+#     # q1=prevmin>=mini and prevmin<=maxi
+#     # q2=prevmin+1>=mini and prevmin+1<=maxi
+#     # q3=prevmin-1>=mini and prevmin-1<=maxi
 
-    # p1=prevmax>=mini and prevmax<=maxi
-    # p2=prevmax+1>=mini and prevmax+1<=maxi
-    # p3=prevmax-1>=mini and prevmax-1<=maxi
-    # if(q1 or q2 or q3 or p1 or p2 or p3):
-    #     flag=cur
-    # else:
-    #     cur+=1
-    #     prevmin=min(prevmin,a[i])
-    #     prevmax=max(prevmax,a[i])
+#     # p1=prevmax>=mini and prevmax<=maxi
+#     # p2=prevmax+1>=mini and prevmax+1<=maxi
+#     # p3=prevmax-1>=mini and prevmax-1<=maxi
+#     # if(q1 or q2 or q3 or p1 or p2 or p3):
+#     #     flag=cur
+#     # else:
+#     #     cur+=1
+#     #     prevmin=min(prevmin,a[i])
+#     #     prevmax=max(prevmax,a[i])
     
