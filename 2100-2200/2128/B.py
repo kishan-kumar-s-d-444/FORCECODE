@@ -2,39 +2,33 @@ t=int(input())
 for _ in range(t):
     n=int(input())
     p=list(map(int,input().split()))
-    i,j=1,n-1
-    inc=True
-    prev=p[0]
-    res='L'
-    while(i<j):
-        if(inc):
-            if(p[i]<=prev):
-                res+='L'
-                inc=False
-                prev=p[i]
-                i+=1
-            elif(p[j]<=prev):
+    i,j=0,n-1
+    flag=True
+    res=""
+    while(i<=j):
+        if(p[i]<p[j]):
+            if(flag):
                 res+='R'
-                inc=False
-                prev=p[j]
-                j-=1
+                res+='L'
+                flag=False
             else:
                 res+='L'
-                prev=p[i]
-                i+=1
+                res+='R'
+                flag=True
+            j-=1
+            i+=1
+        elif(p[i]>p[j]):
+            if(flag):
+                res+='L'
+                res+='R'
+                flag=False
+            else:
+                res+='R'
+                res+='L'
+                flag=True
+            j-=1
+            i+=1
         else:
-            if(p[i]>=prev):
-                res+='L'
-                inc=True
-                prev=p[i]
-                i+=1
-            elif(p[j]>=prev):
-                res+='R'
-                inc=True
-                prev=p[j]
-                j-=1
-            else:
-                res+='L'
-                prev=p[i]
-                i+=1            
+            res+='L'
+            i+=1
     print(res)
