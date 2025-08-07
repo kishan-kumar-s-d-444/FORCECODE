@@ -5,5 +5,5 @@ for _ in range(t):
     if(sum(a)%n==0):
         print(-1)
     else:
-        print([i for i in range(1,n+1)])
+        print([i+1 for i in range(n)])
     
