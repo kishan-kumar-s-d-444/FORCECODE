@@ -17,7 +17,6 @@ for _ in range(t):
                 mex=j
         if(mex!=maxi-mini):
             flag=False
-            break
     if(flag):
         print("yes")
     else:
