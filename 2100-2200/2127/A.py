@@ -6,6 +6,8 @@ for _ in range(t):
     for i in range(n-2):
         maxi=float('-inf')
         mini=float('inf')
+        if(-1 in a[i:i+3]):
+            continue
         for j in range(i,i+3):
             if(a[j]!=-1):
                 maxi=max(maxi,a[j])
@@ -17,6 +19,7 @@ for _ in range(t):
                 mex=j
         if(mex!=maxi-mini):
             flag=False
+            break
     if(flag):
         print("yes")
     else:
