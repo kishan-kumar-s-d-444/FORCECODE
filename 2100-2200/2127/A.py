@@ -22,5 +22,5 @@ for _ in range(t):
             break
     if(flag):
         print("yes")
-    else:
-        print("No")
+        continue
+    print("No")
