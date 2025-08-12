@@ -20,7 +20,7 @@ for _ in range(t):
         if(mex!=maxi-mini):
             flag=False
             break
-    if(flag):
-        print("yes")
+    if(not flag):
+        print("No")
         continue
-    print("No")
+    print("Yes")
