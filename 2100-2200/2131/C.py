@@ -11,27 +11,37 @@ for _ in range(t):
     for i in range(n):
         q1=T[i]%k
         dic2[q1]=dic2.get(q1,0)+1
-        
+    # print(dic1)
+    # print(dic2)
+
     flag=True
-    for nm,cn in dic1.items():
+    for nm,cnt in dic1.items():
         key1=abs(nm-k)
         key2=nm
         if(key1 in dic2):
-            if(dic2[key1]>=cn):
-                dic2[key1]=dic2[key1]-cn
-                cn=0
+            if(dic2[key1]>=dic1[nm]):
+                dic2[key1]=dic2[key1]-dic1[nm]
+                dic1[nm]=0
             else:
+                dic1[nm]=dic1[nm]-dic2[key1]
                 dic2[key1]=0
-                cn-=dic2[key1]
-        if(cn>0):
-            if(key2 in dic2):
-                dic2[key2]=dic2[key2]-cn
-                cn=cn-dic2[key2]
-        if(cn>0):
+        if(dic1[nm]>0):
+            if(key2 in dic2 and dic2[key2]>=dic1[nm]):
+                dic2[key2]=dic2[key2]-dic1[nm]
+                dic1[nm]=0
+            else:
+                flag=False
+                break
+        if(dic1[nm]>0):
             flag=False
             break
-    for key,val in dic2.items():
-        if(val>0):
+        # print("HI",dic1,dic2)
+    for v in dic2.values():
+        if(v>0):
+            flag=False
+            break
+    for v in dic1.values():
+        if(v>0):
             flag=False
             break
     if(flag):
