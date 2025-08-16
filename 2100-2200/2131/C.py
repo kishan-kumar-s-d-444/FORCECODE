@@ -3,22 +3,28 @@ for _ in range(t):
     n,k=map(int,input().split())
     S=list(map(int,input().split()))
     T=list(map(int,input().split()))
-    flag=True
+    dic1={}
     dic2={}
+    for i in range(n):
+        q1=S[i]%k
+        dic1[q1]=dic1.get(q1,0)+1
     for i in range(n):
         q1=T[i]%k
         dic2[q1]=dic2.get(q1,0)+1
-    for i in range(n):
-        q1=S[i]%k
-        key1=abs(q1-k)
-        key2=q1
-        if(key1 in dic2 and dic2[key1]>0):
-            dic2[key1]-=1
-        elif(key2 in dic2 and dic2[key2]>0):
-            dic2[key2]-=1
-        else:
+        
+    flag=True
+    if(dic1.get(0,0)!=dic2.get(0,0)):
+        flag=False
+    if(k%2==0 and dic1.get(k//2,0)!=dic2.get(k//2,0)):
+        flag=False
+    limit=k//2
+    r=1
+    while(flag and r<=limit):
+        it1=dic1.get(r,0)+dic1.get(abs(k-r),0)
+        it2=dic2.get(r,0)+dic2.get(abs(k-r),0)
+        if(it1!=it2):
             flag=False
-            break     
+        r+=1
     if(flag):
         print("YES")
     else:
