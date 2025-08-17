@@ -1,3 +1,4 @@
+import math
 t=int(input())
 for _ in range(t):
     n,k=map(int,input().split())
@@ -7,24 +8,23 @@ for _ in range(t):
     dic2={}
     for i in range(n):
         q1=S[i]%k
-        dic1[q1]=dic1.get(q1,0)+1
+        q2=abs(q1-k)
+        key=min(q1,q2)
+        dic1[key]=dic1.get(key,0)+1
     for i in range(n):
         q1=T[i]%k
-        dic2[q1]=dic2.get(q1,0)+1
+        q2=abs(q1-k)
+        key=min(q1,q2)
+        dic2[key]=dic2.get(key,0)+1
         
     flag=True
-    if(dic1.get(0,0)!=dic2.get(0,0)):
-        flag=False
-    if(k%2==0 and dic1.get(k//2,0)!=dic2.get(k//2,0)):
-        flag=False
-    limit=k//2
-    r=1
-    while(flag and r<=limit):
-        it1=dic1.get(r,0)+dic1.get(abs(k-r),0)
-        it2=dic2.get(r,0)+dic2.get(abs(k-r),0)
-        if(it1!=it2):
+    for i in range(n):
+        q1=S[i]%k
+        q2=abs(q1-k)
+        key=min(q1,q2)
+        if(key not in dic1 or key not in dic2 or dic1[key]!=dic2[key]):
             flag=False
-        r+=1
+            break    
     if(flag):
         print("YES")
     else:
