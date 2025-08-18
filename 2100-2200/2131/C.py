@@ -16,7 +16,7 @@ for _ in range(t):
         q1=T[i]%k
         q2=abs(q1-k)
         key=min(q1,q2)
-        if(key in dic2 and dic2[key]>0):
+        if(key in dic1 and dic1[key]>0):
             dic1[key]=dic1.get(key,0)-1
         else:
             flag=False
