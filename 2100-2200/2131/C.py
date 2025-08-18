@@ -5,6 +5,7 @@ for _ in range(t):
     S=list(map(int,input().split()))
     T=list(map(int,input().split()))
     dic1={}
+    flag=True
     dic2={}
     for i in range(n):
         q1=S[i]%k
@@ -15,16 +16,11 @@ for _ in range(t):
         q1=T[i]%k
         q2=abs(q1-k)
         key=min(q1,q2)
-        dic2[key]=dic2.get(key,0)+1
-        
-    flag=True
-    for i in range(n):
-        q1=S[i]%k
-        q2=abs(q1-k)
-        key=min(q1,q2)
-        if(key not in dic1 or key not in dic2 or dic1[key]!=dic2[key]):
+        if(key in dic2 and dic2[key]>0):
+            dic1[key]=dic1.get(key,0)-1
+        else:
             flag=False
-            break    
+            break
     if(flag):
         print("YES")
     else:
