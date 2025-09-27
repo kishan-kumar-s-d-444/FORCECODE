@@ -9,4 +9,5 @@ for _ in range(t):
         ans+=g[0]
     for i in range(n-1,0,-2):
         ans+=g[i]
+    
     print(ans)
