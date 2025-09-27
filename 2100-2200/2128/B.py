@@ -1,0 +1,34 @@
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    p=list(map(int,input().split()))
+    i,j=0,n-1
+    flag=True
+    res=""
+    while(i<=j):
+        if(p[i]<p[j]):
+            if(flag):
+                res+='R'
+                res+='L'
+                flag=False
+            else:
+                res+='L'
+                res+='R'
+                flag=True
+            j-=1
+            i+=1
+        elif(p[i]>p[j]):
+            if(flag):
+                res+='L'
+                res+='R'
+                flag=False
+            else:
+                res+='R'
+                res+='L'
+                flag=True
+            j-=1
+            i+=1
+        else:
+            res+='L'
+            i+=1
+    print(res)

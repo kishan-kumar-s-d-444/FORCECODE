@@ -1,0 +1,31 @@
+t=int(input())
+for _ in range(t):
+    x,y=map(int,input().split())
+    if(x>y):
+        while(x>9):
+            res=0
+            num=x
+            while(num):
+                res+=(num%10)
+                num=num//10
+            x=res
+        while(y>9):
+            res=0
+            num=y
+            while(num):
+                res+=(num%10)
+                num=num//10
+            y=res
+        if(x+1==y):
+            print("Yes")
+        elif(x==9 and y==1):
+            print("Yes")
+        else:
+            print("No")
+    elif(x<y):
+        if(x+1==y):
+            print("Yes")
+        else:
+            print("No")
+    else:
+        print("No")
