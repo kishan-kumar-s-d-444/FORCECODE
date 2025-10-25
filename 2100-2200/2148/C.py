@@ -19,3 +19,4 @@ for _ in range(t):
         score+=1
         cur+=1
     print(score)
+    #Time Limit 
